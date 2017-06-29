@@ -16,7 +16,16 @@ var counter = {
 }
 
 function countLetters(counter, sample_text){
-  // FIX ME
+  length = sample_text.length;
+  if(length === 0){
+      return counter;
+    }
+  var letter = sample_text.slice(0,1);
+  sample_text = sample_text.slice(1,length);
+  if(counter.hasOwnProperty(letter)){
+    counter[letter] += 1;
+  }
+  return countLetters(counter, sample_text);
 }
 
 $(document).ready(function(){
