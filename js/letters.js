@@ -20,7 +20,7 @@ function countLetters(counter, sample_text){
   if(length === 0){
       return counter;
     }
-  var letter = sample_text.slice(0,1);
+  var letter = (sample_text.slice(0,1)).toLowerCase();
   sample_text = sample_text.slice(1,length);
   if(counter.hasOwnProperty(letter)){
     counter[letter] += 1;
